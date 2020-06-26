@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calculater</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+
+	<style>
+		body 
+		{
+			
+			background: #FC5C7D; 
+			background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D); 
+			background: linear-gradient(to right, #6A82FB, #FC5C7D); 
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<br>
+
+	<div class="container animated bounceIn  ">
+
+					<div class="col-xl-6  col-lg-6 col-sm-12 col-md-12 col-12 m-auto">
+						
+					
+					<h1 style="font-family: Forte;" class="text-center text-white text-capitalize "  >Made by m.kashif</h1>
+					<h1 class="text-center text-white animated headShake infinite  " style="font-family: Forte;">CALCULATER </h1>
+					<hr class="btn-outline-dark">
+					<input type="text" class="form-control mb-3 " placeholder="Enter Your Value" autocomplete="off"
+						id="userinput">
+					</div>
+
+			
+
+			<div class=" col-xl-6  col-lg-6 col-sm-12 col-md-12 col-12 m-auto  ">
+
+				
+
+					<div class="table-responsive">
+						<table class="table text-center  table-striped  shadow rounded">
+
+							<tr>
+								<td>
+									<input class="btn text-white  pr-4 pl-4" type="button" onclick="Cal('%')"
+										value="%"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white  pr-4 pl-4 " type="button" onclick="Cal('CE')"
+										value="CE"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white  pr-4 pl-4 " type="button" id="clear"
+										onclick="clear_output()" value="C"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white  pr-4 pl-4 " type="button" onclick="Cal('/')"
+										value="/"></input>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="btn text-white  pr-4 pl-4" type="button" onclick="Cal('7')"
+										value="7"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white  pr-4 pl-4" type="button" onclick="Cal('8')"
+										value="8"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white  pr-4 pl-4" type="button" onclick="Cal('9')"
+										type="button" value="9"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white  pr-4 pl-4" type="button" onclick="Cal('-')"
+										type="button" value="-"></input>
+
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									<input class="btn text-white  pr-4 pl-4" type="button" onclick="Cal('4')"
+										value="4"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white  pr-4 pl-4  " type="button" onclick="Cal('5')"
+										value="5"></input>
+								</td>
+								<td>
+									<input class="btn text-white   pr-4 pl-4 " type="button" onclick="Cal('6')"
+										value="6"></input>
+
+
+								</td>
+								<td>
+									<input class="btn text-white   pr-4 pl-4 " type="button" onclick="Cal('*')"
+										value="x"></input>
+
+								</td>
+
+							<tr>
+								<td>
+									<input class="btn text-white   pr-4 pl-4 " type="button" onclick="Cal('1')"
+										value="1"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white   pr-4 pl-4 " type="button" onclick="Cal('2')"
+										value="2"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white   pr-4 pl-4 " type="button" onclick="Cal('3')"
+										value="3"></input>
+
+								</td>
+								<td>
+									<input class="btn text-white   pr-4 pl-4 " type="button" onclick="Cal('+')"
+										value="+"></input>
+
+								</td>
+							</tr>
+							<td>
+								<input class="btn text-white   pr-4 pl-4 " type="button" onclick="Cal('+=')"
+									value="+="></input>
+
+							</td>
+							<td>
+								<input class="btn text-white  pr-4 pl-4 " type="button" onclick="Cal('0')"
+									value="0"></input>
+
+							</td>
+							<td>
+								<input class="btn text-white  pr-4 pl-4" type="button" onclick="Cal('.')"
+									value="."></input>
+
+							</td>
+							<td><input type="button" id="btn1" onclick="Output()" type="button"
+									class="btn text-white  pr-4 pl-4" value="="></input>
+
+							</td>
+							</tr>
+				
+			</div>
+			</table>
+		
+	</div>
+
+
+
+
+	<script type="text/javascript">
+
+		var get_value
+		function Cal(numbers)
+		{
+
+			get_value = document.getElementById('userinput').value
+			if (get_value == "")
+			{
+				alert("Please Fill Empty Textbox \n Type Value From Your Keyboard")
+			}
+
+			else
+			{
+				get_value = document.getElementById('userinput').value += numbers
+			}
+		}
+
+
+		function clear_output() 
+		{
+			document.getElementById('userinput').value = ""
+		}
+		
+
+		function Output() 
+		{
+			var output = document.getElementById('userinput')
+			output.value = eval(output.value)
+		}
+
+
+	</script>
+
+</body>
+
+</html>
